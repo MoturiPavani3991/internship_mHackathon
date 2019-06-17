@@ -1,0 +1,98 @@
+
+
+<style>
+
+
+.signup-form {
+        width: 500px;
+            margin: 50px auto;
+            height:500px
+            
+            
+  }
+  .login-form form {
+          margin-bottom: 15px;
+            
+  }
+   .login-form h2 {
+            margin: 0 0 15px;
+  }
+        .form-control, .btn {
+            min-height: 38px; 
+            border-radius: 2px;
+        }
+        .btn {        
+            font-size: 15px;
+            font-weight: bold;
+        }
+      
+     
+    
+    
+     .heading{
+        color:black;
+     }
+     .fa-remove{
+      float:right;
+       bottom:70em;
+     }
+    
+    
+    
+    </style>
+
+
+<div class="signup-form">
+ 
+    
+    <i class="fa fa-remove" (click)="onNoClick()"> </i>
+   
+
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+    
+        <h2 class="text-center">Add Event</h2>  
+    <div class="form-group">
+            <label for="inputState">Event Name</label>
+            <input type="text" id="inputState" class="form-control" [(ngModel)]="name" name="name"/>
+             
+            
+          </div>
+        
+    <div class="form-group">
+          <label for="exampleFormControlTextarea1">Event Data</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="=10" [(ngModel)]="eventdata" name="eventdata"></textarea>
+  </div> 
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Venue</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="=10" [(ngModel)]="venue" name="venue"></textarea>
+  </div> 
+  <div class="form-group">
+    
+     
+
+      <label for="exampleFormControlTextarea1">Date & Time :</label><br>
+<input [owlDateTime]="dt2" class="date" [(ngModel)]="datetime" name="datetime">
+<span [owlDateTimeTrigger]="dt2"><i class="fa fa-calendar fa-2x"></i></span>
+<owl-date-time #dt2></owl-date-time>
+
+
+      
+</div> 
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Rules</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="=10" [(ngModel)]="rule" name="rule"></textarea>
+  </div> 
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Other info</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="=10" [(ngModel)]="info" name="info"></textarea>
+  </div> 
+  
+  
+      
+    <div class="form-group">
+            <button type="button" (click)="clickEvent()" class="btn btn-success btn-lg btn-block">Submit</button>
+        </div>
+    </form>
+  
+</div>
+                       

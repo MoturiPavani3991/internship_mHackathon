@@ -1,0 +1,167 @@
+
+	/* body{
+		color: #fff;
+		background: #63738a;
+		font-family: 'Roboto', sans-serif;
+	}
+    .form-control{
+		height: 40px;
+		color: #969fa4;
+	}
+	.form-control:focus{
+		border-color:blue;
+	}
+    .form-control, .btn{        
+        border-radius: 3px;
+    }
+	.signup-form{
+		width: 400px;
+		margin: 0 auto;
+		padding: 30px 0;
+	}
+	.signup-form h2{
+		color: #636363;
+        margin: 0 0 15px;
+		position: relative;
+		text-align: center;
+    }
+	.signup-form h2:before, .signup-form h2:after{
+		content: "";
+		height: 2px;
+		width: 30%;
+		background: #d4d4d4;
+		position: absolute;
+		top: 50%;
+		z-index: 2;
+	}	
+	.signup-form h2:before{
+		left: 0;
+	}
+	.signup-form h2:after{
+		right: 0;
+	}
+    .signup-form .hint-text{
+		color: #999;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+    .signup-form form{
+		color: #999;
+		border-radius: 3px;
+    	margin-bottom: 15px;
+        background: #f2f3f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+	.signup-form .form-group{
+		margin-bottom: 20px;
+	}
+	.signup-form input[type="checkbox"]{
+		margin-top: 3px;
+	}
+	.signup-form .btn{        
+        font-size: 16px;
+        font-weight: bold;		
+		min-width: 140px;
+        outline: none !important;
+    }
+	.signup-form .row div:first-child{
+		padding-right: 10px;
+	}
+	.signup-form .row div:last-child{
+		padding-left: 10px;
+	}    	
+    .signup-form a{
+		color: #fff;
+		text-decoration: underline;
+	}
+    .signup-form a:hover{
+		text-decoration: none;
+	}
+	.signup-form form a{
+		color: blue;
+		text-decoration: none;
+	}	
+	.signup-form form a:hover{
+		text-decoration: underline;
+	}  
+	/* .container{
+        background-image: url("D:\mhack\images\loginbg.jpg");
+        height: 100%; 
+
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ } */ 
+     
+ .signup-form {
+	width: 500px;
+	margin: 50px auto;
+	margin-bottom: 15px;
+         background:rgba(47, 38, 38, 0.5);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); 
+        padding: 30px;
+        opacity:1;
+	
+	
+}
+.login-form form {
+	margin-bottom: 15px;
+	/* background:grey;
+	/* /box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); */
+	padding: 30px; 
+}
+.login-form h2 {
+	margin: 0 0 15px;
+}
+.form-control, .btn {
+	min-height: 38px; 
+	border-radius: 2px;
+}
+.btn {        
+	font-size: 15px;
+	font-weight: bold;
+}
+ .bg {
+	  background-image: url("E:\Angular\mhack1\images\bg.jpg");
+	  background-color:grey;
+	  height: 752px;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  position: fixed;
+	  background-attachment: fixed;
+	  background-blend-mode:screen;
+	  
+
+} 
+
+
+
+.heading{
+color:black;
+}
+.upload{
+	padding:5px 10px;
+	background:blue;
+	border:1px solid #171b18;
+	position:relative;
+	color:#fff;
+	border-radius:2px;
+	text-align:center;
+	float:left;
+	cursor:pointer
+  }
+  .fileupload
+ {
+	  position: absolute;
+	  z-index: 1000;
+	  opacity: 0;
+	  cursor: pointer;
+	  right: 0;
+	  top: 0;
+	  height: 100%;
+	  font-size: 24px;
+	  width: 100%;
+  }

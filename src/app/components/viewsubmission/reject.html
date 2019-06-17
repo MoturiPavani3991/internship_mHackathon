@@ -1,0 +1,30 @@
+
+<style>
+  .fa-remove{
+       float:right;
+       bottom:30em;
+     }
+    
+
+.container {
+    width: 400px !important;
+    
+}
+#first{
+    float:left;
+}
+#second{
+    float:right;
+}
+
+</style>
+
+
+
+<div class="container">
+    <i class="fa fa-remove" (click)="onNoClick()"></i>
+    <p>Are u sure want to remove????</p>
+    <span><button id="first" type="button" class="btn btn-danger btn-md" (click)="onNoClick()">No</button>
+    <button type="button" id="second" class="btn btn-success btn-md"(click)="onNoClick()">Yes</button></span>
+
+</div>

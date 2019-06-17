@@ -1,0 +1,31 @@
+
+<style>
+    .fa-remove{
+         float:right;
+         bottom:30em;
+       }
+      
+  
+  .container {
+      width: 400px !important;
+      
+  }
+  #first{
+      float:left;
+  }
+  #second{
+      float:right;
+  }
+  
+  </style>
+  
+  
+  
+  <div class="container">
+      <i class="fa fa-remove" (click)="onNoClick()"></i>
+      <p> Add Event/ Add Judge</p>
+   
+      <button id="first" type="button" class="btn btn-primary btn-md" (click)="openDialog2()">Add judge</button>
+      <button type="button" id="second" class="btn btn-primary btn-md"(click)="openDialog()">Add Event</button>
+  
+  </div>

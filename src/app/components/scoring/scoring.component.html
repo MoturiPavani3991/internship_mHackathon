@@ -1,0 +1,85 @@
+
+<!-- 
+<div class="bg container-fluid">
+<div class="bs-example container">
+        <input type="text"   [(ngModel)]="term" placeholder="Search">
+    <table class="table table-striped">
+           
+           
+        <thead class="head">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Idea</th>
+                <th>Tech stack</th>
+                <th>Marks</th>
+            
+            </tr>
+        </thead>
+        <tbody *ngFor="let user of users|filter:term;let i=index">
+            <tr>
+
+                    <th scope="row">{{i+1}}</th> 
+                <th>{{user.name}}</th>
+                <td>{{user.idea}}</td>
+                <td>{{user.techstack}}</td>
+                
+                <td>
+                  <div class="form-group">
+                    <button type="submit" (click)="openDialog()" class="btn btn-success btn-md">Add score</button>
+                  </div>
+                </td>
+            </tr>
+                    
+        </tbody>
+    </table>
+</div>
+</div>               -->
+
+
+
+<div class = "container">
+        <h1 class="h1-text">Scoring
+          </h1>
+          <br>
+          <div class="text search">
+              <input type="text" class="form-control"  [(ngModel)]="term" placeholder="Search">
+               
+             </div>
+          
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Team Lead Name</th>
+                <th scope="col">Project Title</th>
+                <th scope="col">Tech Stack</th>
+                <th scope="col">Scoring</th>
+                <th scope="col">Team-details</th>
+                
+              </tr>
+            </thead>
+            <tbody *ngFor="let user of finalteams|filter:term;let i=index">
+                    <tr>
+
+                            <th scope="row">{{i+1}}</th> 
+                        <th>{{user.teamleadername}}</th>
+                        <td>{{user.idea}}</td>
+                        <td>{{user.stack}}</td>
+                        
+                        <td>
+                          <div class="form-group">
+                            <button type="submit" (click)="openDialog(user.teamleadername)" class="btn btn-success btn-md">Add score</button>
+                          </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                              <button type="submit" (click)="openDialog2(user.teamleadername)" class="btn btn-info btn-md">Teaminfo</button>
+                            </div>
+                          </td>
+                    </tr>
+            </tbody>
+
+          </table>
+          <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+    </div>

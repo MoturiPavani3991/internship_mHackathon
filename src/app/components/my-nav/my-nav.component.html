@@ -1,0 +1,49 @@
+
+<div class="example-container " [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <h1 class="example-app-name" style="padding-right: 70%;">mHack DashBoard</h1>
+ 
+    <div class="btn-group mr-3 nav">
+
+      <i *ngIf="auth.isLoggedIn() && auth.isAdmin()" class="fa fa-plus fa-2x" (click)="openDialog3()" style="padding-right:32px"></i>
+            <i class="fa fa-sign-out fa-2x" id="logout" (click)="logout()"></i>
+           
+           
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list class="display">
+          <!-- <a mat-list-item *ngIf="auth.isLoggedIn() && auth.isAdmin()" routerLink="/dashboard/addjudge">Addjudge</a> -->
+           <a mat-list-item *ngIf="auth.isLoggedIn() && auth.isAdmin()" routerLink="/admin/dashboard">Dashboard</a> 
+          <a mat-list-item *ngIf="auth.isLoggedIn() && auth.isAdmin()" routerLink="/admin/viewsubmission">View submission</a>
+          <a mat-list-item *ngIf="auth.isLoggedIn() && auth.isAdmin()"  routerLink="/admin/viewsortedlist">View finalteams list</a>
+          <a mat-list-item *ngIf="auth.isLoggedIn() && auth.isAdmin()"  routerLink="/admin/viewresult">View result</a>
+          <a mat-list-item *ngIf="auth.isLoggedIn() && auth.isJudge()"  routerLink="/judge/dashboard">Dashboard</a>
+          <a mat-list-item *ngIf="auth.isLoggedIn() && auth.isJudge()"  routerLink="/judge/scoring">Scoring</a>
+    
+    <a mat-list-item *ngIf="auth.isLoggedIn() && auth.isJudge()"  routerLink="/judge/viewresult">View Result</a>
+        
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content >
+        <router-outlet></router-outlet>
+        <!-- <ng-http-loader spinner="sk-wave"></ng-http-loader> -->
+       </mat-sidenav-content>
+     </mat-sidenav-container>
+     <div class=" foot">
+     <footer>
+       <div class="leftfooter">
+       @2019 Miracle Software Systems,Inc.</div>
+       <div class="rightfooter"> Visit us at www.miraclesoft.com</div>
+      </footer>
+    </div>
+   </div>
+
+
+
+ 

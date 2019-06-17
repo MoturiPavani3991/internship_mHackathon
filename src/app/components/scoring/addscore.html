@@ -1,0 +1,173 @@
+
+<style>
+   .fa-remove{
+       float:right;
+       bottom:30em;
+     }
+    
+.container {
+    width: 500px !important;
+    overflow-y: auto;
+    margin: 50px auto;
+      height:500px
+}
+
+
+
+  .login-form form {
+          margin-bottom: 15px;
+            
+  }
+   .login-form h2 {
+            margin: 0 0 15px;
+  }
+.form-control, .btn {
+            min-height: 38px; 
+            border-radius: 2px;
+}
+  .btn {        
+            font-size: 15px;
+            font-weight: bold;
+ }
+      
+     
+    
+    
+    
+
+</style>
+
+
+
+<div class="container">
+
+    <i class="fa fa-remove"  (click)="onNoClick()" ></i>
+        <div class="bs-example">
+          <h2 align="center" >Add Score</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>QUESTIONS</th>
+                            <th> Enter Marks(0-10)</th>
+                            
+                        
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                           
+                            <td>Strength of Idea</td>
+                            
+                            <td>
+                              <div class="form-group">
+                                <input type="number" class="form-control" placeholder="add score" min=0 max=10 required [(ngModel)]="m1">
+                              </div>
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                            <td>Presentation Skills</td>
+                            
+                            <td>
+                              <div class="form-group">
+                                <input type="number" class="form-control" placeholder="add score" min=0 max=10 required [(ngModel)]="m2">
+                              </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>UI/UX design (if used)</td>
+                            
+                            
+                            <td>
+                              <div class="form-group">
+                                <input type="number" class="form-control" placeholder="add score" min=0 max=10 required [(ngModel)]="m3">
+                              </div>
+                            </td>
+                            
+                           
+                           
+                        </tr> 
+                        <tr>
+                          <td>Demo fullfillment</td>
+                          
+                          <td>
+                            <div class="form-group">
+                              <input type="number" class="form-control" placeholder="add score" min=0 max=10 required [(ngModel)]="m4">
+                            </div>
+                          </td>
+                          
+                      </tr> 
+                      <tr>
+                        <td>Technical Complexity</td>
+                        
+                        <td>
+                          <div class="form-group">
+                            <input type="number" class="form-control" placeholder="add score" min=0 max=10 required [(ngModel)]="m5">
+                          </div>
+                        </td>
+                        
+                    </tr> 
+                    <tr>
+                      <td>Feasibility of solution</td>
+                      
+                      <td>
+                        <div class="form-group">
+                          <input type="number" class="form-control" placeholder="add score" min=0 max=10 required [(ngModel)]="m6">
+                        </div>
+                      </td>
+                      
+                  </tr> 
+                  <tr>
+                    <td>Timeliness of Demos</td>
+                    
+                    <td>
+                      <div class="form-group">
+                        <input type="number" class="form-control" placeholder="add score"min=0 max=10 required [(ngModel)]="m7">
+                      </div>
+                    </td>
+                    
+                </tr>   
+                <tr>
+                  <td>Presentation Skills</td>
+                  
+                  <td>
+                    <div class="form-group">
+                      <input type="number" class="form-control" placeholder="add score" min=0 max=10 required [(ngModel)]="m8">
+                    </div>
+                  </td>
+                  
+              </tr>
+              <tr>
+                <td>comments</td>
+                
+                <td>
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="comments" required></textarea>
+                  </div>
+                </td>
+                
+            </tr>     
+              <tr>
+                <td>
+                <div class="form-group">
+                  <button type="submit" (click)="submit()" class="btn btn-success btn-md" >submit</button>
+              </div>
+              </td>
+              <td>
+                <div class="form-group">
+                  <input type="number" class="form-control" [disabled]="isubmitted" placeholder={{m1+m2+m3+m4+m5+m6+m7+m8}} value={{m1+m2+m3+m4+m5+m6+m7+m8}} required >
+                </div>
+              </td>
+              </tr>
+               
+                    </tbody>
+                </table>
+            </div>
+                                        
+            
+            
+            
+            
+
+</div>

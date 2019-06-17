@@ -1,0 +1,59 @@
+
+
+   
+
+
+                            
+<div class = "container">
+        <h1 class="h1-text"> Final Teams
+          </h1>
+          <br>
+          <div class="text search">
+              <input type="text" class="form-control"  [(ngModel)]="term" placeholder="Search">
+               
+             </div>
+       
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Team Lead Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Project Title</th>
+                <th scope="col">Tech Stack</th>
+                <th scope="col">Team Details</th>
+
+                
+              </tr>
+            </thead>
+            <tbody *ngFor="let user of finalteams |filter:term ;let i=index">
+                    <tr>
+                        <th scope="row">{{i+1}}</th>   
+                        <th>{{user.teamleadername}}</th>
+                        <th>{{user.email}}</th>
+                        <td>{{user.idea}}</td>
+        
+                        <td>{{user.stack}}</td>
+                        <td>
+                            <div class="form-group">
+                              <button type="submit" (click)="openDialog2(user.teamleadername)" class="btn btn-info btn-md">Teaminfo</button>
+                            </div>
+
+                         </td>
+
+                       
+                    </tr>
+                  
+                </tbody>
+               
+                    <tbody *ngIf="finalteams?.length == 0">
+                        <tr>
+                          <td class="no-data-available" colspan="4">No Data!</td>
+                        </tr>
+                      </tbody>
+
+            
+            
+          </table>
+          <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+    </div>

@@ -1,0 +1,49 @@
+
+
+
+                       
+
+<div class = "container">
+    <h1 class="h1-text"> Registered Teams
+      </h1>
+      <br>
+      <div class="text search">
+     <input type="text" class="form-control"  [(ngModel)]="term" placeholder="Search">
+      
+    </div>
+      
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Team Lead Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Tech Stack</th>
+            <th scope="col">Project Title</th>
+            <th scope="col">View PDF</th>
+            <th scope="col"> Accept/Reject</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let team of submittedteams|filter:term; let i=index">
+          <tr>
+            <th scope="row">{{i+1}}</th>
+            <td>{{team.teamleadername}}</td>
+            <td>{{team.email}}</td>
+            <td>{{team.stack}}</td>
+            <td>{{team.idea}}</td>
+            <td><button type="button" class="btn btn-primary space" (click)="openDialog()">View</button>
+            
+            </td>
+            <td><button type="button" class="btn btn-success space" [disabled]="team.isEnable" (click)="openDialog3(team.teamleadername,team.email)">Accept</button>
+              <button type="button" class="btn btn-danger space"  [disabled]="team.isEnable" (click)="openDialog2()">Reject</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+</div>
+
+
+
+
+

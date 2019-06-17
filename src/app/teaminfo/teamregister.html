@@ -1,0 +1,27 @@
+<style>
+
+.fa-remove{
+       float:right;
+       bottom:30em;
+     }
+.container {
+    width: 250px !important;
+    
+}
+#first{
+    float:left;
+}
+#second{
+    float:right;
+}
+
+</style>
+
+
+
+<div class="container">
+        <i class="fa fa-remove" (click)="onNoClick()"></i>
+        <p>Submit  Team Details </p>
+        <button type="button" id="first"class="btn btn-info btn-md" (click)="onNoClick()">edit</button>
+        <button type="button" id="second" class="btn btn-success btn-md"(click)="onsubmit()">submit</button>
+</div>

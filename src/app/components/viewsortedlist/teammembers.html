@@ -1,0 +1,75 @@
+<style>
+
+
+
+  .space{
+  
+  margin-right: 22px;
+  }
+  .h1-text{
+  text-align: center
+  }
+  .text{
+  float:right;
+  width:300px
+  }
+  .search{
+  margin-bottom: 19px
+  }
+  
+  .container {
+      width: 500px !important;
+      overflow-y: auto;
+      margin: 50px auto;
+       
+  }
+  .fa-remove{
+         float:right;
+         bottom:30em;
+       }
+  </style>
+  
+  
+  
+  
+  
+  
+  
+  <div class = "container">
+          <i class="fa fa-remove"  (click)="onNoClick()" ></i>
+          <h1 class="h1-text">Team-info
+            </h1>
+            <br>
+            <div class="text search">
+                <input type="text" class="form-control"  [(ngModel)]="term" placeholder="Search">
+                 
+               </div>
+          
+          <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th>#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Contact</th>
+                  
+                 
+                </tr>
+              </thead>
+              <tbody *ngFor="let user of teamMembers|filter:term;let i=index">
+                      <tr>
+                              <th scope="row">{{i+1}}</th> 
+                          <th>{{user.name}}</th>
+                          <th>{{user.email}}</th>
+                          <td>
+                              {{user.phone}}
+                          </td>
+                          
+                          
+                      </tr>
+                                
+                  </tbody>
+              
+            </table>
+            <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+      </div>

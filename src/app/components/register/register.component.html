@@ -1,0 +1,77 @@
+
+
+<div class="bg container-fluid">
+<div class="signup-form">
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+		<h3>Leader Registration Form</h3>
+		
+        
+		<div class="form-group">
+		
+			
+				  <div class='input-group user'>
+					
+					  <input type='text' class="form-control"  name="teamleadername" placeholder="Teamleader name"  [(ngModel)]="model.teamleadername" #teamleadername="ngModel" [ngClass]="{ 'is-invalid': teamleadername.touched  && f.submitted}" required/>
+					  <div *ngIf="teamleadername.touched && f.submitted " class="invalid-feedback">
+						<div *ngIf="teamleadername.errors.required">Teamleader Name is required</div>
+					</div>
+					  
+				  </div>
+			  
+   </div> 
+      
+		
+		<div class="form-group">
+		
+			
+			<div class='input-group user'>
+					
+					<input type="text" class="form-control" name="email"   placeholder="Email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid':  email.invalid && email.touched && f.submitted  }" required email />
+					<div *ngIf=" email.invalid && email.touched && f.submitted " class="invalid-feedback">
+						<div *ngIf="email.errors.required">Email is required</div>
+						<div *ngIf="email.errors.email">Email must be a valid email address</div>
+					</div>
+				
+			</div>
+		
+</div>  
+		
+		<div class="form-group">
+				<div class='input-group user'>
+						
+					<input type="contact" class="form-control" name="contact" placeholder="contact" [(ngModel)]="model.contact" #contact="ngModel" [ngClass]="{ 'is-invalid': contact.touched && contact.invalid && f.submitted }" required="required">
+					<div *ngIf="contact.touched && contact.invalid && f.submitted " class="invalid-feedback">
+							<div *ngIf="contact.errors.required">contact is required</div>
+					</div>
+					
+				</div>
+        </div>
+    <div class="form-group">
+          <label for="exampleFormControlTextarea1">Idea Description</label>
+		  <textarea class="form-control" id="exampleFormControlTextarea1" name="idea" rows="=10" [(ngModel)]="model.idea" #idea="ngModel" [ngClass]="{ 'is-invalid': idea.touched && idea.invalid && f.submitted   }" required="required"></textarea>
+		  <div *ngIf="idea.touched && idea.invalid && f.submitted " class="invalid-feedback">
+				<div *ngIf="idea.errors.required">Idea Description is mandetory</div>
+		</div>
+	</div> 
+	<div class="form-group">
+		<label for="exampleFormControlTextarea1">Tech stack</label>
+		<textarea class="form-control" id="exampleFormControlTextarea1" rows="=10"[(ngModel)]="model.stack" name="stack" ></textarea>
+  </div> 
+  
+    <div class="form-group upload">
+        <label for="exampleFormControlFile1">Idea  file input</label>
+		<input type="file" class="form-control-file fileupload" (change)='upload($event)' id="exampleFormControlFile1" [(ngModel)]="model.file" name="file">
+		
+      
+    </div>      
+        <!-- <div class="form-group">
+			<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the Terms of Use &amp; Privacy Policy</label>
+		</div> -->
+		<div class="form-group">
+            <button type="submit" (click)="submitForm()" [disabled]="!f.form.valid" class="btn btn-success btn-lg btn-block">Register Now</button>
+        </div>
+    </form>
+	
+</div>
+</div>
+                           

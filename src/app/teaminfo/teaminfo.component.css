@@ -1,0 +1,87 @@
+/* .signup-form {
+	width: 500px;
+	margin: 50px auto;
+	margin-bottom: 15px;
+         background:rgba(47, 38, 38, 0.5);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); 
+        padding: 30px;
+        opacity:1;
+	
+	
+}
+.login-form form {
+	margin-bottom: 15px;
+	
+	padding: 30px; 
+}
+.login-form h2 {
+	margin: 0 0 15px;
+}
+.form-control, .btn {
+	min-height: 38px; 
+	border-radius: 2px;
+}
+.btn {        
+	font-size: 15px;
+	font-weight: bold;
+} */
+.signup-form {
+	width: 500px;
+	margin: 50px auto;
+	margin-bottom: 20px;
+         background:rgba(47, 38, 38, 0.5);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); 
+        padding: 30px;
+		opacity:1;
+	
+	
+	
+}
+.form-group {
+    margin-bottom: 0rem;
+}
+.container {
+    width: 500px !important;
+    overflow-y: auto;
+    margin: 50px auto;
+      height:500px
+}
+
+
+
+  .login-form form {
+          margin-bottom: 15px;
+            
+  }
+   .login-form h2 {
+            margin: 0 0 15px;
+  }
+.form-control, .btn {
+            min-height: 38px; 
+            border-radius: 2px;
+}
+  .btn {        
+            font-size: 15px;
+			font-weight: bold;
+			margin-top:10px;
+			margin-left:150px;
+ }
+ .bg {
+	  background-image: url("E:\Angular\mhack1\images\bg.jpg");
+	  background-color:grey;
+	  height:753px;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  position: fixed;
+	  /* background-attachment: fixed; */
+	  background-blend-mode:screen;
+	  
+
+} 
+
+
+
+.heading{
+color:black;
+}

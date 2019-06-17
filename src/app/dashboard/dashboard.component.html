@@ -1,0 +1,64 @@
+<div flex-gt-sm="50" class="graph1">
+    <div class="pad">
+      <div [style.height.px]="250">
+        <ngx-charts-bar-vertical
+          [results]="single"
+          [view]=[500,250]
+          [scheme]="{ domain: [ '#30E07B', '#E75691', '#00C0FF', '#5D6A75' ] }"
+          [barPadding]="10"
+          [gradient]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="true"
+          [legendTitle]="'Legenda'"
+          [xAxisLabel]="'Student Hackathon '"
+          [yAxisLabel]="'No.of students registered'"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true">
+        </ngx-charts-bar-vertical>
+      </div>
+    </div>
+  </div>
+
+
+   <div class="studenttext">
+    <h2>Miracle Hackathon</h2>
+    <p>Innovation and entrepreneurship are at the peak. 
+      In order to make development a comprehensive mass movement and innovate on all fronts,
+      Miracle Software Systems have come front to organise Miracle Hackathon (MSS) 2019 - 
+      a unique Open Innovation Model for identifying new and disruptive technology innovations 
+      to solve the challenges . It's a non-stop product development competition, where problem statements
+      
+    are posed to technology students for innovative solutions. It can help to:</p>
+      <ul>
+      <li>Harness creativity & expertise of students</li>
+      <li>Spark institute-level hackathons</li>
+       <li>Build funnel for 'Startup India' campaign</li>
+      <li>Crowdsource solutions for improving governance and quality of life</li>
+      <li> Provide opportunity to citizens to provide innovative solutions to India's daunting problems</li>
+    </ul>
+  
+  </div> 
+
+
+  <div flex-gt-sm="50" class="graph">
+      <div class="pad">
+        <div [style.height.px]="250">
+          <ngx-charts-bar-vertical
+            [results]="chart"
+            [view]=[500,250]
+            [scheme]="{ domain: [ '#30E07B', '#E75691', '#00C0FF', '#5D6A75' ] }"
+            [barPadding]="10"
+            [gradient]="true"
+            [xAxis]="true"
+            [yAxis]="true"
+            [legend]="true"
+            [legendTitle]="'Legenda'"
+            [xAxisLabel]="'Employee Hackathon'"
+            [yAxisLabel]="'No.of employees registered'"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true">
+          </ngx-charts-bar-vertical>
+        </div>
+      </div>
+    </div>
